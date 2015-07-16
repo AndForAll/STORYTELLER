@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="CSS/styles.css">
+  </head>
+  
+  <body>
+    <div id="view">
+      
+    </div>
+
+
+            <!-- TEMPLATE FOR start page-->
+  <script type="text/html" id="tpl_play">
+    
+      <div class="page" id="play">
+      <h2>We're nearly ready to begin!</h2>
+      <h3>Just a couple of things to mention:</h3>
+      <div id="prePlayInfo">
+        <p>This application requires access to your microphone, in order to enjoy the full experience please check allow when prompted by your browser</p>
+
+        <p>Would you rather type your story than read it aloud?</p>
+
+        <p>You can also connect your by visiting the following website....</p>
+
+        <p>Continue without phone?</p>
+        <button id="btnStart"><h1> > </h1></button>
+      </div>
+    
+  </script> 
+
+            <!-- TEMPLATE FOR Story play window with text-->
+  <script type="text/html" id="tpl_story">
+        <div class="page" id="menu-story">
+        
+        <div class="left">
+          <button id="btnMenuExpand"><h1 class="menuIcon">|||</h1></button>
+        </div>
+        <div class="middle">
+          
+              <h1 class="story_text"><%= line[0] %>
+            <input id='speechInput' type="text" placeholder="<%= line[1] %>"></h1>
+              </div>
+        <div class='right'>
+        <button id="btnNextStep"><h1 class="arrowIcon">>></h1></button>
+        </div>
+      </div>
+  </script>
+
+  			<!-- TEMPLATE FOR default menu state-->
+	<script type="text/html" id="tpl_pop">
+    
+  		<div class="page" id="pop" >
+        <button id="btnMenu"><h1 class="menuTitle">MENU</h1></button>
+		  </div>
+    
+	</script> 
+    
+        			<!-- TEMPLATE FOR menu expanded-->
+	<script type="text/html" id="tpl_pop_expand">
+    
+  		<div class="page" id="pop-exp" >
+      <button class='menu' id="btnHome"><h2>HOME /</h2></button>
+        <button class='menu' id="btnHelp"><h2>HELP /</h2></button>
+        <button class='menu' id="btnPause"><h2>PAUSE /</h2></button>
+        <button class='menu' id="btnClose"><h2>X</h2></button>  
+		  </div>
+    
+	</script>
+    
+          <!-- <script type="text/javascript" src="http://codepen.io/lucymatch/pen/pJoybM.js"></script> -->
+          <script type="text/javascript" src="JS/jquery.min.js"></script>
+          <script type="text/javascript" src="js/underscore-min.js"></script>
+          <!-- <script type="text/javascript" src="JS/main.js"></script> -->
+          <script type="text/javascript" src="JS/play-menu.js"></script>
+    
+  </body>
+  
+</htmL>
