@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>STORE RI</title>
+	<meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+	<link rel="stylesheet" href="css/normalize.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<!-- Fixed Footer -->
+	<footer>
+		<button class="btnHome">Go Home</button>
+	</footer>
+	<!-- View container where pages are rendered -->
+	<div id="view"></div>
+
+	<!-- TEMPLATE FOR HOME PAGE -->
+	<script type="text/html" id="tpl_home">
+		<div class="page" id="home">
+			<button class="btnStart">Begin!</button>
+		</div>
+	</script>
+
+		<!-- TEMPLATE FOR STORY -->
+	<script type="text/html" id="tpl_story">
+		<div class="page" id="story">
+			<div id="story">
+			<h1><%= line %><input id='speechInput' type="text"></h1>
+			</div>
+		</div>
+	</script>
+
+			<!-- TEMPLATE FOR POP UP-->
+	<script type="text/html" id="tpl_pop">
+		<div class="page" id="pop" >
+			<img src= "<%= img %>" id="img" style="min-height:100%; width:100%; height:auto; position: fixed; top:0; left:0;"> 
+		</div>
+	</script>
+
+	
+	<script type="text/javascript" src="js/annyang.min.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/underscore-min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+
+</body>
+</html>

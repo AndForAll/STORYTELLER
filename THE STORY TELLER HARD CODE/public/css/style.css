@@ -1,0 +1,95 @@
+/* your style begins here */
+body {
+	/*background: #ffffff;*/
+	background-color:#ACF0F2;
+}
+
+footer {
+	position: fixed;
+	bottom: 20px;
+	/*left: 0px;*/
+	z-index: 9;
+	width: 100%;
+	/*text-align: center;*/
+}
+
+.btnHome{
+	padding:18px 20px;
+	background-color:#ACF0F2;
+	border:1px solid #ACF0F2;
+	text-align: center;
+}
+
+#view{
+	text-align: center;
+
+}
+
+.page {
+	padding: 20px;
+	background-color:#ACF0F2;
+	height:100%;
+	width:100%;
+}
+
+.btnStart {
+	margin-left: auto;
+	margin-right:auto;
+	margin-top:25%;
+	background-color:#F3FFE2;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #F3FFE2;
+	display:inline-block;
+	cursor:pointer;
+	color:#1695A3;
+	font-family:'helvetica Neue', helvetica, Arial, sans-serif;
+	font-size:28px;
+	font-weight:100;
+	padding:18px 68px;
+	text-decoration:none;
+}
+
+#speechInput{
+	background-color:transparent;
+	padding: 10px;
+	border: none;
+	border-bottom: solid 2px #c9c9c9;
+	transition: border 0.3s;
+	font-size:48px;
+	font-family:'helvetica Neue', helvetica, Arial, sans-serif;
+}
+
+#speechInput:focus {
+	border-bottom: solid 2px #969696;
+	outline: none;
+}
+
+#story{
+	margin-top:10%;
+}
+
+h1 {
+	font-size:48px;
+	font-family:'helvetica Neue', helvetica, Arial, sans-serif;
+}
+
+img.img {
+	min-height:100%;
+	min-width:1024px;
+
+	width:100%;
+	height:auto;
+	position: fixed;
+	top:0;
+	left:0;
+}
+
+@media screen and (max-width:1024px) {
+	img.img {
+		left:50%;
+		margin-left:512px;
+	}
+}
+
