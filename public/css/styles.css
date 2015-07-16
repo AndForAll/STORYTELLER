@@ -1,0 +1,264 @@
+/*FOR NEW SPLASH */
+#home_page{
+	margin-top:4%;
+	width:100%;
+	text-align:center;
+	font-family: Helvetica;
+  /*color: transparent*/
+}
+
+#title{
+	text-transform:uppercase;
+}
+
+#title h1{
+	text-transform:uppercase;
+  font-size:10em;
+}
+
+#main-title {
+	letter-spacing:30px;
+	/*font-size:120px;*/
+  font-style:bold;
+  /*font-weight:400;*/
+
+  padding-bottom: 20px;
+
+}
+
+#sub-title{
+	font-weight:100;
+
+}
+
+
+
+#view{
+/*  width:90%;
+  margin-left:auto;
+  margin-right:auto;*/
+
+
+}
+
+.page{
+/*  margin-left:auto;
+  margin-right:auto;
+  text-align:center;*/
+  /*background: #000;*/
+
+}
+
+#prePlayInfo{
+  font-family: helvetica;
+  font-size: 20px;
+  width: 80%;
+}
+
+#prePlayInfo p{
+  width:50%;
+}
+
+.button{
+  background-color: transparent;
+  border-style: none;
+  transition: all 0.5s ease;
+  font-size: 40px;
+  font-family: Helvetica;
+  text-align:center;
+}
+
+.button h1 {
+	font-size: 2em;
+	font-weight:400px;
+	/*margin-top: 3%;*/
+	/*padding-top:2%*/
+}
+
+#btnMenu {
+  margin-top:3%;
+  text-align:center;
+  font-family: Helvetica;
+  color: #000000;
+  font-size: 40px;
+  /*padding: 10px 20px 10px 20px;*/
+  /*text-decoration: none;*/
+  background-color: transparent;
+  border-style: none;
+  transition: all 0.5s ease;
+}
+
+#btnMenuExp {
+  margin-top:3%;
+  text-align:center;
+  font-family: Helvetica;
+  color: #000000;
+  font-size: 40px;
+  /*padding: 10px 20px 10px 20px;*/
+  /*text-decoration: none;*/
+  background-color: transparent;
+  border-style: none;
+  transition: all 0.5s ease;
+}
+
+h1{
+  display:inline;
+  position:relative;
+  letter-spacing: -5;
+
+}
+
+.menuTitle:after {
+  content: 'MENU';
+  position:absolute; left:8px; top:4px;
+  color:#FFE11A;
+  /*font-size: 83px;*/
+  /*transition: position 0.5s ease;*/
+  transition: all 0.9s ease;
+}
+
+.menuTitle:hover:after{
+  position:absolute;
+  left:0px;
+  top:0px;
+
+}
+
+.menu{
+  color: #000000;
+  /*padding: 10px 20px 10px 20px;*/
+  /*text-decoration: none;*/
+  background-color: transparent;
+  border-style: none;
+
+}
+
+h2 {
+  font-family: helvetica;
+  font-size: 35px;
+  font-weight:800;
+  letter-spacing: 10px;
+  padding-left:10px;
+  text-shadow: -4px 3px 0 #FFe11a;
+  transition: all 0.5s ease;
+}
+
+h2:hover{
+  text-shadow: 0px 0px 0 #FFe11a;
+}
+
+.left{
+  width:10%;
+	margin-top:2%;
+  background-color:#fff;
+  height:100%;
+  /*position:fixed;*/
+  text-align:center;
+  float: left;
+  /*background-color: #ddd;*/
+  display: inline-block;
+      border:0px;
+    border-right:2px;
+    border-style:solid;
+    z-index:5;
+
+}
+
+.middle{
+  width:70%;
+  height:100%;
+	margin-top:2%;
+  /*background-color:#fff;*/
+  /*width: 70%;*/
+  position:absolute;
+  /*margin-left:10%;*/
+  display: inline-block;
+  overflow:hidden;
+  text-align:center;
+  /*margin-left:auto;
+  margin-right:auto;*/
+
+}
+
+.story_text{
+  font-family: helvetica;
+  letter-spacing:5px;
+  font-size:40px;
+  width:90%;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+#speechInput{
+  border: 0px;
+  border-bottom:5px;
+  border-style:solid;
+  font-family: helvetica;
+  letter-spacing:5px;
+  font-size:40px;
+}
+
+.right{
+		margin-top:2%;
+    width:18%;
+    float: right;
+    /*background-color: #ddd;*/
+    display: inline-block;
+    border:0px;
+    border-left:2px;
+    border-style:solid;
+    z-index:5;
+		text-align:center;
+}
+
+#btnMenuExpand, #btnNextStep{
+  font-family:Helvetica;
+  font-size:40px;
+  /*margin-top:1%;*/
+  text-align:center;
+  font-family: Helvetica;
+  color: #000000;
+
+  /*text-decoration: none;*/
+  background-color: transparent;
+  border-style: none;
+
+}
+
+.menuIcon{
+  margin-top:20%;
+  text-align:center;
+}
+
+.menuIcon:after{
+  content:'|||';
+  position:absolute; left:3.4%; top:3.5%;
+  color:#FFE11A;
+  float: left;
+  transition: all 0.5s ease;
+}
+
+.menuIcon:hover:after{
+  position:absolute; left:2.8%; top:3.5%;
+  color:#FFE11A;
+}
+
+.arrowIcon{
+  margin-top:20%;
+  text-align:center;
+  padding-left:10%
+}
+
+.arrowIcon:after{
+  content:'>>';
+
+  position:absolute; right:2.8%; top:10%;
+  color:#FFE11A;
+  float: right;
+  transition: all 0.5s ease;
+}
+
+.arrowIcon:hover:after{
+  position:absolute; right:-20%;
+  color:#FFE11A;
+}

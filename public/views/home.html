@@ -1,0 +1,12 @@
+<div id="tpl_home" >
+<div class="page" id="home_page" >
+		<div id="title">
+			      <h1 id="main-title">{{title}}</h1>
+			      <h2 id="sub-title" ng-click="closeWindows()">v v v v v v<h2>
+      </div>
+      <div class='home_gallery' ng-repeat="item in fables">
+        <!-- <h3 ui-sref="Play({id:item.id})">{{item.title}}</h3> -->
+      	<h3 ng-click="startPlayState(item.id)">{{item.title}}</h3>
+			</div>
+</div>
+</div>
