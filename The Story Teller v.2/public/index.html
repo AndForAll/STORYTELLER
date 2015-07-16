@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>STORYTELLA</title>
+	<meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<!-- Fixed Footer -->
+	<footer>
+			<button class="btnCreate">Create a Story Template!</button>
+			<button class="btnBrowse">Browse and read a story!</button>
+	</footer>
+	<!-- View container where pages are rendered -->
+	<div id="view"></div>
+
+<!-- Template for home page-->
+	<script type="text/html" id="tpl_home">
+		<div class="page" id="home">
+			<h2>Are you going to read me a story?</h2>
+			<button class="btnCreate">Create a Story Template!</button>
+			<button class="btnBrowse">Browse and read a story!</button>
+		</div>
+	</script>
+
+<!-- TEMPLATE FOR CREATE PAGE -->
+	<script type="text/html" id="tpl_create">
+		<div id="shade"></div>
+		<div class="page" id="create">
+			<h2>Ready to Create a Story template?!</h2>
+			<h4>type in a story with blanks for the story teller to fill in themselves!</h4>
+			<input type="text" value="<%= title %>" id="iptTitle">
+
+
+			<% if(story.length > 0) {%>
+			<ul>
+			<%_.each(story,function(item){ %>
+
+				<li>
+					<input type="text" placeholder=" i.e. Once apon a time " class="<%= story.indexOf(item) %>" value="<%= item.line_content %>">
+
+					<input type="text" placeholder="BLANK" class="<%= 'var' + story.indexOf(item) %>" value="<%= item.story_var %>">
+				</li>
+				<li class="createButtons">
+					<button class="btnNewLine" value='<%= story.indexOf(item) %>' id='<%= 'btnNew' + story.indexOf(item) %>'>+?</button>
+					<button class="btnDeleteLine" value='<%= story.indexOf(item) %>' id='<%= 'btnDel' + story.indexOf(item) %>'>-?</button>
+
+					<input type='submit' name='<%= story.indexOf(item) %>' value='*' class="btnEventProfile">
+				</li>
+
+				<%});%>
+			</ul>
+				<% } %>
+
+			<button id="btnCreateSubmit">Create it already!!</button>
+
+			<div id="modal">
+			<form>
+    			<fieldset>
+      				<label for="default-profiles">Choose a Default profile type</label></br>
+               		 <input name="default-profiles" list="default-profiles" /></br>
+                    	<datalist id="default-profiles">
+                      	<option value="Background">
+                      	<option value="Middleground">
+                      	<option value="Foreground">
+                    	</datalist></br>
+
+      				<label for="name">Or create a new one</label></br>
+                         <input type="text" name="name" id="name" placeholder="Name of Profile"></br>
+
+                	<label for="pos-x">X position</label></br>
+      					<input type='range' min=0 max=6 value=3 id='pos-x' name="pos-x"></br>
+                	<label for="pos-y">Y position</label></br>
+      					<input type='range' min=0 max=6 value=3 id='pos-y' name="pos-y"></br>
+                	<label for="pos-z">Z position</label></br>
+      					<input type='range' min=0 max=6 value=3 id='pos-z' name="pos-z"></br>
+
+                	<label for="width">width</label></br>
+      					<input type="text" name="width" id="width"></br>
+                	<label for="height">Height</label></br>
+      					<input type="text" name="height" id="height"></br>
+
+                	<label for="restriction">Restriction</label></br>
+      					<input type="checkbox" name="restriction" value="" id="restrict"></br>
+
+                	<label for="type">Type</label></br>
+                		<input name="type" list="type-of-output" /></br>
+                    		<datalist id="type-of-output">
+                      		<option value="Images">
+                      		<option value="Music">
+            				</datalist>
+    			</fieldset>
+  			</form>
+        	<button class="btnCloseProfileCreator">X</button>
+        	<button class="btnSaveProfileCreator">&#10004;</button>
+        	</div>
+		</div>
+	</script>
+
+
+		<!-- TEMPLATE FOR BROWSE PAGE -->
+	<script type="text/html" id="tpl_browse">
+		<div class="page" id="browse">
+			<h2>Are you going to read me a story?</h2>
+			<% if(data.length > 0) { %>
+				<% _.each(data.reverse(), function(item){ %>
+			<li>
+				<h1><a href='#' data-id ="<%= item.objectId %>"><%= item.title %></a></h1>
+				<input type='submit' name='<%= item.objectId %>' value='GO!' class="btnStartStory">
+				<input type='submit' name='<%= item.objectId %>' value='X' class="btnDelete">
+				<input type='submit' name='<%= item.objectId %>' value='^' class="btnUpdate">
+			</li>
+	 			<%	}); %>
+			<% } else { %>
+				<h4>There are currently no Story Templates in the library! <a href="#create">Would you like to create one now?</a></h4>
+				<% } %>
+		</div>
+	</script>
+
+		<!-- TEMPLATE FOR UPDATE PAGE -->
+	<script type="text/html" id="tpl_update">
+		<div class="page" id="update">
+			<h2>UPDATE PAGE</h2>
+
+		</div>
+	</script>
+
+	<!-- TEMPLATE FOR STORY TEXT PAGE-->
+<script type="text/html" id="tpl_story_read">
+	<div class="page" id="read">
+		<h2><%= title %></h2>
+		<h1><%= data.line_content%></h1>
+
+	</div>
+</script>
+
+	<script type="text/javascript" src="js/annyang.min.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/underscore-min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+
+</body>
+</html>
